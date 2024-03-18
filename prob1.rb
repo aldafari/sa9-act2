@@ -1,19 +1,23 @@
 RSpec.describe User do
+  let(:user)
   describe "#log_in" do
     it "logs the user in" do
-      # Fill in the test
+      user.log_in
+      expect(user.log_out).to be true
     end
   end
 
   describe "#log_out" do
     it "logs the user out" do
-      # Fill in the test
+      user.log_out
+      expect(user.log_in).to be false
     end
   end
 
   describe "#username" do
     it "returns the correct username" do
-      # Fill in the test
+      user.username
+      expect(user.username).to eq(username)
     end
   end
 end
